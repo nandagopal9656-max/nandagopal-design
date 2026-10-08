@@ -49,6 +49,15 @@ body{isolation:isolate;transition:background-color .25s,color .25s}
 [data-motion="paused"] .reveal-ready{opacity:1;translate:none;transition:none}
 @media(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-orbit,.cursor-light{display:none!important}.reveal-ready{opacity:1;translate:none}.hero-art{translate:none!important}.art-preview{transform:none!important}}
 </style>
+<style>
+/* Shared artwork popup */
+#art-dialog{border-radius:24px}
+#art-dialog .dialog-bar{gap:16px}
+#art-dialog .dialog-bar h2{min-width:0;overflow-wrap:anywhere}
+#art-dialog #close-art{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;padding:0;border-radius:50%;font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:400;line-height:1}
+#art-dialog #close-art:hover{opacity:.8}
+@media(max-width:640px){#art-dialog{border-radius:18px}}
+</style>
 </head>
 <body>
 <div class="cursor-orbit" aria-hidden="true"><span>VIEW</span></div><div class="cursor-light" aria-hidden="true"></div>
@@ -78,7 +87,7 @@ body{isolation:isolate;transition:background-color .25s,color .25s}
 <p id="contact-status" class="contact-status" role="status" tabindex="-1" hidden>Thank you. Your message has been submitted.</p>
 </form></section>
 </main><footer><div class="footer-title">Let’s make it<br><em>mean something.</em></div><div class="contact-links"><a href="mailto:nandagopal9656@gmail.com">nandagopal9656@gmail.com ↗</a><a href="https://www.behance.net/nandagopal96" target="_blank" rel="noopener">Behance ↗</a></div><div class="footer-bottom"><span>© 2026 Nandagopal</span><button type="button" id="motion-toggle" aria-label="Pause background motion" aria-pressed="false">Pause motion</button><span>Graphic design. Thoughtfully done.</span><a href="#">Back to top ↑</a></div></footer>
-<dialog id="art-dialog" aria-labelledby="art-title"><div class="dialog-bar"><h2 id="art-title"></h2><button type="button" id="close-art" aria-label="Close artwork">Close ✕</button></div><img id="art-image" alt=""></dialog><script>
+<dialog id="art-dialog" aria-labelledby="art-title"><div class="dialog-bar"><h2 id="art-title"></h2><button type="button" id="close-art" aria-label="Close artwork"><span aria-hidden="true">×</span></button></div><img id="art-image" alt=""></dialog><script>
 'use strict';
 document.querySelectorAll('details').forEach(detail => {
   detail.addEventListener('toggle', () => {
