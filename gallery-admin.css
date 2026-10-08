@@ -21,7 +21,3 @@
 .admin-publish a{color:var(--blue);text-decoration:underline}
 @media(max-width:640px){#image-editor{padding:16px}#image-editor .dialog-bar{top:-16px}.admin-toolbar{position:relative}.admin-toolbar p{flex-basis:100%}}
 
-/* Translucent artwork panel with a blurred page behind it. */
-#art-dialog{background:rgba(16,17,21,.9);color:#f2f3f7}
-#art-dialog::backdrop,#image-editor::backdrop{background:rgba(0,0,0,.35);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
-#art-dialog #close-art,#art-dialog .admin-control{background:#f2f3f7;color:#101115}
