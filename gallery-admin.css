@@ -21,3 +21,7 @@
 .admin-publish a{color:var(--blue);text-decoration:underline}
 @media(max-width:640px){#image-editor{padding:16px}#image-editor .dialog-bar{top:-16px}.admin-toolbar{position:relative}.admin-toolbar p{flex-basis:100%}}
 
+/* Half-opaque artwork surround; blur only the page behind the popup. */
+#art-dialog{background:rgba(16,17,21,.5);color:#f2f3f7;box-shadow:0 24px 80px rgba(0,0,0,.35)}
+#art-dialog::backdrop{background:rgba(0,0,0,.2);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+#art-dialog #close-art,#art-dialog .admin-control{background:#f2f3f7;color:#101115}
