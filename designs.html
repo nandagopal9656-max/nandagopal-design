@@ -68,16 +68,11 @@ html{scroll-padding-top:90px}body{max-width:none!important}.concept-bar{position
 @media(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-orbit,.cursor-light{display:none!important}.reveal-ready{opacity:1;translate:none}.hero-art img{transform:scale(1.08)!important}.art-preview{transform:none!important}}
 
 </style>
-<style>
-/* Shared artwork popup */
+<style id="rounded-artwork-popup">
 #art-dialog{border-radius:24px}
-#art-dialog .dialog-bar{gap:16px}
-#art-dialog .dialog-bar h2{min-width:0;overflow-wrap:anywhere}
-#art-dialog #close-art{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;padding:0;border-radius:50%;font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:400;line-height:1}
-#art-dialog #close-art:hover{opacity:.8}
+#art-dialog #art-image{border-radius:12px}
 @media(max-width:640px){#art-dialog{border-radius:18px}}
 </style>
-<link rel="stylesheet" href="gallery-admin.css?v=visible-surround-20261008">
 </head>
 <body>
 <div class="concept-bar"><span class="concept-caption">DESIGN DIRECTIONS</span><div role="group" aria-label="Choose portfolio layout"><button type="button" data-layout-choice="editorial" aria-pressed="true">01 — Editorial</button><button type="button" data-layout-choice="gallery" aria-pressed="false">02 — Gallery</button></div><a href="./">Current website ↗</a></div>
@@ -108,7 +103,7 @@ html{scroll-padding-top:90px}body{max-width:none!important}.concept-bar{position
 <p id="contact-status" class="contact-status" role="status" tabindex="-1" hidden>Thank you. Your message has been submitted.</p>
 </form></section>
 </main><footer><div class="footer-title">Let’s make it<br><em>mean something.</em></div><div class="contact-links"><a href="mailto:nandagopal9656@gmail.com">nandagopal9656@gmail.com ↗</a><a href="https://www.behance.net/nandagopal96" target="_blank" rel="noopener">Behance ↗</a><a href="tel:+918139033393">+91 81390 33393</a></div><div class="footer-bottom"><span>© 2026 Nandagopal</span><button type="button" id="motion-toggle" aria-label="Pause background motion" aria-pressed="false">Pause motion</button><span>Graphic design. Thoughtfully done.</span><a href="#">Back to top ↑</a></div></footer>
-<dialog id="art-dialog" aria-labelledby="art-title"><div class="dialog-bar"><h2 id="art-title"></h2><button type="button" id="close-art" aria-label="Close artwork"><span aria-hidden="true">×</span></button></div><img id="art-image" alt=""></dialog><script>
+<dialog id="art-dialog" aria-labelledby="art-title"><div class="dialog-bar"><h2 id="art-title"></h2><button type="button" id="close-art" aria-label="Close artwork">Close ✕</button></div><img id="art-image" alt=""></dialog><script>
 'use strict';
 document.querySelectorAll('details').forEach(detail => {
   detail.addEventListener('toggle', () => {
@@ -227,5 +222,4 @@ if(!reduce.matches&&'IntersectionObserver' in window){const observer=new Interse
 })();
 
 </script>
-<script src="gallery-admin.js"></script>
 </body></html>
